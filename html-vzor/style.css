@@ -154,7 +154,7 @@ body {
 }
 
 .climate__icon {
-	/* margin-right: 20px */
+	margin-right: 20px
 }
 
 .climate__icon img {
@@ -295,14 +295,6 @@ body {
 	font-weight: 600;
 	color: #000;
 }
-
-
-
-
-
-
-
-
 
 
 /* detail */

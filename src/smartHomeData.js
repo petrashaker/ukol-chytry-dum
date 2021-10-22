@@ -1,4 +1,4 @@
-export const smartHomeData = {
+ export const smartHomeData = {
 	lights: [
 		{
 			name: 'Obývací pokoj',
