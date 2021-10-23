@@ -3,8 +3,8 @@ import './style.css';
 
 import tempImg from './img/temp.svg';
 
-const Climate = ({temperature, humidity}) => {
-    const [temp, setTemp] = useState(temperature);
+const Climate = ({climate}) => {
+    const [temp, setTemp] = useState(climate.temperature);
 
     return (
         <div className="climate">
@@ -14,7 +14,7 @@ const Climate = ({temperature, humidity}) => {
 
         <div className="climate__content">
             <div className="climate__temperature"> {temp} &deg;C</div>
-            <div className="climate__humidity">Vlhost vzduchu {humidity} &nbsp;%</div>
+            <div className="climate__humidity">Vlhost vzduchu {climate.humidity} &nbsp;%</div>
         </div>
 
         <div className="climate__controls">

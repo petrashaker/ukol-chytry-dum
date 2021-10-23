@@ -9,7 +9,8 @@ const Dashboard = ({smartHomeData}) => {
     return (
         <main className="dashboard">
             <Lights className="lights" lights={smartHomeData.lights} />
-            <Climate temperature={smartHomeData.climate.temperature} humidity={smartHomeData.climate.humidity}/>
+            <Climate climate={smartHomeData.climate} />
+            {/* <Climate temperature={smartHomeData.climate.temperature} humidity={smartHomeData.climate.humidity}/> */}
             <Blinds state={smartHomeData.blinds} />
             <Energy energy={smartHomeData.energyConsumption}/>
         </main>
