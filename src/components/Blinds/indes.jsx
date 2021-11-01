@@ -4,8 +4,8 @@ import './style.css';
 import blindsOpen from './img/blinds-open.svg';
 import blindsClosed from './img/blinds-closed.svg';
 
-const Blinds = ({state}) => {
-    const [blindState, setBlindState] = useState(state);
+const Blinds = ({blinds}) => {
+    const [blindState, setBlindState] = useState(blinds);
 
     return (
         <div className="blinds">

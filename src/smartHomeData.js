@@ -23,7 +23,7 @@
 	},
 	blinds: 'open',
 	energyConsumption: {
-		electricity: 36.7,
+		electricity: 3670,
 		water: 14.1,
 	}
 };

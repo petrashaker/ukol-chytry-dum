@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './style.css';
 
 import energyImg from "./img/electricity.svg";
 import waterImg from "./img/water.svg";
 
-const Energy = ({energy}) => {
+const Energy = ({electricity, water, numOfLights}) => {
+
+    const [consumptionEl, setConsumptionEl] = useState(electricity);
+    const num = 1;
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setConsumptionEl(prevState => prevState + (numOfLights * num));
+        }, 1000);
+        return () => {clearInterval(interval)};
+    }, [numOfLights]);
+    
     return (
         <div className="energy">
             <div className="energy__source">
@@ -13,7 +24,7 @@ const Energy = ({energy}) => {
                 </div>
                 <div className="energy__consumption">
                     <div className="energy__description">Elektřina</div>
-                    <div className="energy__value">{energy.electricity} kW</div>
+                    <div className="energy__value">{consumptionEl} W</div>
                 </div>
             </div>
 
@@ -24,7 +35,7 @@ const Energy = ({energy}) => {
 
                 <div className="energy__consumption">
                     <div className="energy__description">Voda</div>
-                    <div className="energy__value">{energy.water} m<sup>3</sup></div>
+                    <div className="energy__value">{water} m<sup>3</sup></div>
                 </div>
             </div>
         </div>

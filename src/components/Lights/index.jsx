@@ -1,14 +1,15 @@
 import React from "react";
 import Light from "../Light";
 
-const Lights = ({lights}) => {
+const Lights = ({lights, setNumOfLights}) => {
     return (
         <>
        { lights.map(
            light => 
                 < Light key = {light.name}
                         name = {light.name}
-                        state = {light.state}    
+                        state = {light.state}
+                        setNumOfLights = {setNumOfLights}  
                 />
             ) 
        }
