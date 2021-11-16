@@ -20,11 +20,7 @@ const Light = ({name, state, setNumOfLights}) => {
     return (
         <div className="light" onClick ={handleClick}>
             <div className="light__icon">
-                {light === 'on' ? 
-                    <img className="light__icon--img" src={lightOn} alt="light-on" /> 
-                    : 
-                    <img className="light__icon--img" src={lightOff} alt="light-off" /> 
-                }
+                <img className="light__icon--img" src={light === 'on' ? lightOn : lightOff} alt="light-on" /> 
             </div>
             <div className="light__name">{name}</div>
         </div>

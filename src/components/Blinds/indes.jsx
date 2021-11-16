@@ -10,11 +10,7 @@ const Blinds = ({blinds}) => {
     return (
         <div className="blinds">
             <div className="blinds__icon">
-                {blindState === 'open' ? 
-                    <img src={blindsOpen} alt="blinds-open"/>
-                    :
-                    <img src={blindsClosed} alt="blinds-open"/>
-                }
+                <img src={blindState === 'open' ? blindsOpen : blindsClosed} alt="blinds-open"/>
             </div>
 
             <div className="blinds__name">
